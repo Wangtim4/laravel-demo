@@ -31,6 +31,7 @@ class AuthController extends Controller
             return response('授權失敗',401);
         }
         $user = $request->user();
+        // dump($user);
         $tokenResult = $user->createToken('Token');
         dump($tokenResult);
         // $tokenResult->token->save();

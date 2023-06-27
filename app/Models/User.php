@@ -8,8 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 // 引入
 use Laravel\Sanctum\HasApiTokens;
-// use Laravel\Passport\HasApiTokens;
-
+// use Laravel\Passport\Passport;
 class User extends Authenticatable
 {
     // 此用HasApiTokens

@@ -31,10 +31,10 @@ class AuthController extends Controller
             return response('授權失敗',401);
         }
         $user = $request->user();
-        // dump($user);
+        dump($user);
         $tokenResult = $user->createToken('Token');
+        $tokenResult->token->save();
+        return response(['token' => $tokenResult->accessToken]);
         dump($tokenResult);
-        // $tokenResult->token->save();
-        // return response(['token' => $tokenResult->accessToken]);
     }
 }
